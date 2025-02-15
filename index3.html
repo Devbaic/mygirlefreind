@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+         body{
+           background-color: blanchedalmond; 
+           justify-content: center;
+           display: flex;
+           align-items: center;
+           height: 100vh;
+        }
+.container{
+    width: 350px;
+    height: 350px;
+    border: 3px solid pink;
+    box-shadow: 1px 0px 3px 1px palevioletred;
+
+}
+.p1{
+    background-color: rgb(201, 51, 101);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 8rem;
+    
+}
+img{
+    width: 150px;
+    height: 200px;
+    border: 3px dotted rgb(223, 48, 106);
+    border-radius: 40px;
+}
+.image{
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+img:hover{
+cursor: pointer;
+box-shadow: 1px 2px 1px 3px pink;
+transition: 0.5s;
+transform: scale(1.1);
+}
+
+.mode{
+    position: relative;
+    left: 8rem;
+    top: 0.5rem;
+    color: red;
+}
+.btn{
+    position: relative;
+    top: 1rem;
+    left: 4.5rem;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(224, 69, 95);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: rgb(241, 120, 155);
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 2px 1px 3px pink;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="messege">
+    <p class="p1">You and Me</p>
+</div>
+<div class="image">
+    <img src="./photo_2025-02-12_12-43-09.jpg" alt="">
+    <img src="./photo_2025-02-15_20-55-44.jpg" alt="">
+</div>
+<div class="mode">
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+</div>
+<div class="btn">
+    <button onclick="window.location.href='index4.html'">I'm so lucky to have you     <i class="fa-solid fa-heart"></i></button>
+</div>
+</div>
+</body>
+</html>

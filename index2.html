@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Love</title>
+    <style>
+        body{
+           background-color: blanchedalmond; 
+           justify-content: center;
+           display: flex;
+           align-items: center;
+           height: 100vh;
+        }
+.container{
+    width: 350px;
+    height: 230px;
+    border: 3px solid pink;
+    box-shadow: 1px 0px 3px 1px palevioletred;
+}
+img{
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.font1{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: blueviolet;
+position: relative;
+left: 1rem;
+top: 1rem;
+}
+.card{
+    display: flex;
+}
+#countup{
+    font-size: 25px;
+    margin-top: 1rem;
+    position: relative;
+    left: 1rem;
+    letter-spacing: 0.5rem;
+    top: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 1.5rem;
+    color: blueviolet;
+}
+.text{
+    display: flex;
+    gap: 3rem;
+    margin-left: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: purple;
+}
+button{
+    background-color: rgb(224, 63, 89);
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 6.5rem;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(224, 63, 89);
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+<div class="card">
+    <img src="./photo_2025-02-12_12-43-09.jpg" alt="">
+    <p class="font1">How long we've been together?</p><br>
+    
+</div>
+<div class="day">
+    <p id="countup"></p>
+</div>
+<div class="text">
+    <p class="p1">Days</p>
+    <p class="p2">Hours</p>
+    <p class="p3" style="position: relative; right: 0.5rem;">Minutes</p>
+    <p class="p4" style="position: relative; right: 2rem;">Seconds</p>
+</div>
+<div class="btn">
+    <button onclick="window.location.href='index3.html'">Enter next baby</button>
+</div>
+    </div>
+</body>
+<script>
+ var countup = new Date("March 30, 2023").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = now - countup;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countup").innerHTML = days + ": " + hours + ": " + minutes + ": " + seconds;
+}, 1000);
+
+</script>
+</html>
